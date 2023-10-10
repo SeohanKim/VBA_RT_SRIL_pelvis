@@ -1,0 +1,11 @@
+# execute registration
+plastimatch register parameterfile.txt
+
+# rescale moving img to ref img
+plstimatch convert --input moving.nii --output-img moving.nii --fixed ref.nii --output-type short
+
+# apply transformation vector field
+plastimatch warp --default-value 0 --input mask.nii --output-img mask_bs.nii --xf vf.nii
+
+# convert type
+plastimatch convert --input input.nii --output-img out.nii --output-type uchar # or short, long
