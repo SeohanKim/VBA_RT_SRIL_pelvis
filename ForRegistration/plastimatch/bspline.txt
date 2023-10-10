@@ -1,0 +1,24 @@
+[GLOBAL]
+fixed = /home/users/rlaqorms1229/plastimatch_project/pelvic/ct/150.nii
+moving = /home/users/rlaqorms1229/plastimatch_project/pelvic/ct_af/1.nii
+image_out= /home/users/rlaqorms1229/plastimatch_project/pelvic/ct_bs/nomask/1.nii
+vf_out = /home/users/rlaqorms1229/plastimatch_project/pelvic/ct_bs/nomask/vf/1.nii
+
+[STAGE]
+xform = bspline
+optim = lbfgsb
+impl = plastimatch
+threading = openmp
+max_its = 100
+grid_spac = 20 20 20
+res = 4 4 2
+
+[STAGE]
+max_its = 100
+grid_spac = 10 10 10
+res = 2 2 1
+
+[STAGE]
+max_its = 100
+grid_spac = 1 1 1
+res = 1 1 1

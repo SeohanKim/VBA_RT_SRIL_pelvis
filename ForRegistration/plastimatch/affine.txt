@@ -1,0 +1,15 @@
+[GLOBAL]
+fixed = /home/users/rlaqorms1229/plastimatch_project/pelvic/ct/150.nii
+moving = /home/users/rlaqorms1229/plastimatch_project/pelvic/ct/1.nii
+image_out= /home/users/rlaqorms1229/plastimatch_project/pelvic/ct_af/1.nii
+vf_out = /home/users/rlaqorms1229/plastimatch_project/pelvic/ct_af/vf/1.nii
+
+[STAGE]
+xform = align_center
+
+[STAGE]
+xform = affine
+optim = rsg
+impl = itk
+res= 2 2 1
+max_its = 170
